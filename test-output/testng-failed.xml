@@ -3,11 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="learn_Selenium_Interface.CreatLead">
+      <class name="learn_Selenium_Interface2.CreatLead">
         <methods>
           <include name="creatLead"/>
         </methods>
-      </class> <!-- learn_Selenium_Interface.CreatLead -->
+      </class> <!-- learn_Selenium_Interface2.CreatLead -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
