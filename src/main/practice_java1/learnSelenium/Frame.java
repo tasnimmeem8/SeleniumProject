@@ -16,6 +16,7 @@ public class Frame {
 		System.setProperty("webdriver.chrome.driver", "./drivers/chromedriver.exe");
 		driver = new ChromeDriver ();
 		driver.get("https://jqueryui.com/");
+		driver.manage().window().maximize();
 		
 	}
 	
@@ -49,9 +50,9 @@ public class Frame {
 	}
 	
 	@Test (priority = 2)
-	public void sortable() {
+	public void sortable() throws InterruptedException {
 		driver.findElementByLinkText("Sortable").click();
-		driver.switchTo().frame(driver.findElementByClassName("demo-frame"));
+		driver.switchTo().frame(driver.findElementByClassName("demo-frame")); 
 		WebElement item1 = driver.findElementByXPath("(//ul[@id='sortable']/li/span)[1]");
 		WebElement item2 = driver.findElementByXPath("(//ul[@id='sortable']/li/span)[2]");
 		WebElement item3 = driver.findElementByXPath("(//ul[@id='sortable']/li/span)[3]");
@@ -60,7 +61,7 @@ public class Frame {
 		WebElement item6 = driver.findElementByXPath("(//ul[@id='sortable']/li/span)[6]");
 		Actions action = new Actions(driver);
 		action.dragAndDrop(item1, item5).dragAndDrop(item4, item2).dragAndDrop(item5, item3).dragAndDrop(item1, item6).perform();
-		
+		Thread.sleep(2000);
 	}
 	
 	
