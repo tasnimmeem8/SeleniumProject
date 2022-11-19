@@ -8,7 +8,7 @@ public class DragAndDrop1 {
 
 	public static void main(String[] args) {
 
-		System.setProperty("webdriver.chrome.driver","./drivers/chromedriver.exe");
+		System.setProperty("webdriver.chrome.driver", "./drivers/chromedriver.exe");
 
 		ChromeDriver driver = new ChromeDriver();
 		driver.get("https://jqueryui.com/");
@@ -17,22 +17,9 @@ public class DragAndDrop1 {
 		driver.switchTo().frame(frm);
 		WebElement from = driver.findElementByXPath("//div[@id='draggable']");
 		WebElement destination = driver.findElementByXPath("//div[@id='droppable']");
-		Actions action = new Actions (driver);
+		Actions action = new Actions(driver);
 		action.dragAndDrop(from, destination).perform();
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
+
 	}
 
 }

@@ -7,8 +7,8 @@ import org.openqa.selenium.interactions.Actions;
 public class DragAndDrop5 {
 
 	public static void main(String[] args) {
-	
-		System.setProperty("webdriver.chrome.driver","./drivers/chromedriver.exe");
+
+		System.setProperty("webdriver.chrome.driver", "./drivers/chromedriver.exe");
 
 		ChromeDriver driver = new ChromeDriver();
 		driver.get("https://jqueryui.com/");
@@ -17,7 +17,7 @@ public class DragAndDrop5 {
 		driver.switchTo().frame(frm);
 		WebElement from = driver.findElementById("draggable");
 		WebElement to = driver.findElementById("droppable");
-		Actions action = new Actions (driver);
+		Actions action = new Actions(driver);
 		action.dragAndDrop(from, to).perform();
 		driver.close();
 	}

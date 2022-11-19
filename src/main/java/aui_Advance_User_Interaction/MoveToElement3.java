@@ -7,8 +7,7 @@ import org.openqa.selenium.interactions.Actions;
 public class MoveToElement3 {
 
 	public static void main(String[] args) {
-	
-		
+
 		System.setProperty("webdriver.chrome.driver", "./drivers/chromedriver.exe");
 		ChromeDriver driver = new ChromeDriver();
 

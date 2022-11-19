@@ -7,16 +7,16 @@ public class List7 {
 
 	public static void main(String[] args) {
 
-		//Java is an object-oriented programming language(OOP)
-		List<Integer>number = new ArrayList<Integer>();
-		
+		// Java is an object-oriented programming language(OOP)
+		List<Integer> number = new ArrayList<Integer>();
+
 		number.add(10);
 		number.add(200);
-		number .add(30);
+		number.add(30);
 		number.add(40);
 		number.add(60);
-		
-		for(Integer eachnum:number) {
+
+		for (Integer eachnum : number) {
 			System.out.println(eachnum);
 		}
 

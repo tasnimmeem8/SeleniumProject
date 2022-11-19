@@ -12,15 +12,14 @@ public class ChromeBrowser1 {
 
 	public static void main(String[] args) {
 
-
 		WebDriverManager.chromedriver().setup();
-		WebDriver driver = new ChromeDriver ();
+		WebDriver driver = new ChromeDriver();
 		driver.get("http://leaftaps.com/opentaps/control/main");
 		driver.findElement(By.cssSelector("input[id='username']")).sendKeys("DemoSalesManager");
 		driver.findElement(By.xpath("//input[@id='password']")).sendKeys("crmsfa");
-		Actions action = new Actions (driver);
+		Actions action = new Actions(driver);
 		action.sendKeys(Keys.TAB).sendKeys(Keys.ENTER).perform();
-		
+
 	}
 
 }

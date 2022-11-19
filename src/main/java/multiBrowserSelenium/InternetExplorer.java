@@ -10,20 +10,20 @@ import org.testng.annotations.Test;
 import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class InternetExplorer {
-	
+
 	@Test
 	public void testLeaf() {
 		WebDriverManager.iedriver().setup();
-		WebDriver driver = new InternetExplorerDriver ();
+		WebDriver driver = new InternetExplorerDriver();
 		driver.get("http://leaftaps.com/opentaps/control/main");
 		driver.findElement(By.cssSelector("input[id='username']")).sendKeys("DemoSalesManager");
 		driver.findElement(By.xpath("//input[@id='password']")).sendKeys("crmsfa");
-		Actions action = new Actions (driver);
+		Actions action = new Actions(driver);
 		action.sendKeys(Keys.TAB).sendKeys(Keys.ENTER).perform();
 		driver.quit();
-		
-		//Stopped June 15, 2022,
-		
+
+		// Stopped June 15, 2022,
+
 	}
 
 }

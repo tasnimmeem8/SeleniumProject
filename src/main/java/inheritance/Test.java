@@ -3,9 +3,9 @@ package inheritance;
 public class Test extends Whales {
 
 	public static void main(String[] args) {
-		
+
 		Whales obj = new Whales();
-		
+
 		obj.Ear();
 		obj.EarBone();
 		obj.eggs();
@@ -13,9 +13,6 @@ public class Test extends Whales {
 		obj.Milk();
 		obj.mouth();
 		obj.Water();
-		
-		
-		
 
 	}
 

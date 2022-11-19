@@ -11,23 +11,23 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 
 public class ProjectSpecificWrapper_WbDvr_TestLeaf {
-	
+
 	public WebDriver driver;
-	
+
 	@BeforeMethod
 	public void login() {
-		
+
 		System.setProperty("webdriver.chrome.driver", "./drivers/chromedriver.exe");
 		driver = new ChromeDriver();
 		driver.manage().window().maximize();
 		driver.get("http://leaftaps.com/opentaps/control/main");
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-		
+
 		driver.findElement(By.id("username")).sendKeys("DemoSalesManager");
 		driver.findElement(By.name("PASSWORD")).sendKeys("crmsfa");
 		Actions action = new Actions(driver);
 		action.sendKeys(Keys.TAB).sendKeys(Keys.ENTER).perform();
-	    driver.findElement(By.xpath("//a[contains(text(),'CRM/SFA')]")).click();
+		driver.findElement(By.xpath("//a[contains(text(),'CRM/SFA')]")).click();
 	}
 
 	@AfterMethod

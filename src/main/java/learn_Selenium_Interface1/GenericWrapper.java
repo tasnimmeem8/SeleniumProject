@@ -4,18 +4,18 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.Select;
 
-public class GenericWrapper implements WrapperMethods{
-	
+public class GenericWrapper implements WrapperMethods {
+
 	public ChromeDriver driver;
 
 	public void login(String url) {
 		System.setProperty("webdriver.chrome.driver", "./drivers/chromedriver.exe");
-		driver= new ChromeDriver();
+		driver = new ChromeDriver();
 		driver.get(url);
 	}
 
 	public void enterById(String locatorValue, String data) {
-		driver.findElementById(locatorValue).sendKeys(data);	
+		driver.findElementById(locatorValue).sendKeys(data);
 	}
 
 	public void enterByName(String locatorValue, String data) {
@@ -54,7 +54,7 @@ public class GenericWrapper implements WrapperMethods{
 
 	public void clickByClass(String locatorValue) {
 		driver.findElementByClassName(locatorValue).click();
-		
+
 	}
 
 }

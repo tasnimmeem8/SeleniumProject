@@ -8,10 +8,9 @@ import org.openqa.selenium.interactions.Actions;
 public class KeysDown3 {
 
 	public static void main(String[] args) {
-		
 
 		System.setProperty("webdriver.chrome.driver", "./drivers/chromedriver.exe");
-		ChromeDriver driver = new ChromeDriver ();
+		ChromeDriver driver = new ChromeDriver();
 		driver.get("https://jqueryui.com/");
 		driver.findElementByPartialLinkText("Selectable").click();
 		driver.switchTo().frame(driver.findElementByXPath("//iframe[@class=\"demo-frame\"]"));
@@ -21,17 +20,16 @@ public class KeysDown3 {
 		WebElement item4 = driver.findElementByXPath("(//ol[@id='selectable']/li)[4]");
 		WebElement item5 = driver.findElementByXPath("(//ol[@id='selectable']/li)[5]");
 		WebElement item6 = driver.findElementByXPath("(//ol[@id='selectable']/li)[6]");
-		
-		
-		Actions action = new Actions (driver);
-		action.keyDown(Keys.COMMAND).click(item1).click(item2).click(item3).click(item4).click(item5).click(item6).perform();
-		
-		//driver.switchTo().parentFrame();
+
+		Actions action = new Actions(driver);
+		action.keyDown(Keys.COMMAND).click(item1).click(item2).click(item3).click(item4).click(item5).click(item6)
+				.perform();
+
+		// driver.switchTo().parentFrame();
 		driver.switchTo().defaultContent();
 		driver.findElementByLinkText("Demos").click();
 		driver.quit();
-		
-		
+
 	}
 
 }

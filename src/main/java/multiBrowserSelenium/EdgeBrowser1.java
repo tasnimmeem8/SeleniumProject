@@ -13,13 +13,13 @@ public class EdgeBrowser1 {
 
 	@Test
 	public void testLeaf() {
-		
+
 		WebDriverManager.edgedriver().setup();
 		WebDriver driver = new EdgeDriver();
 		driver.get("http://leaftaps.com/opentaps/control/main");
 		driver.findElement(By.cssSelector("input[id='username']")).sendKeys("DemoSalesManager");
 		driver.findElement(By.xpath("//input[@id='password']")).sendKeys("crmsfa");
-		Actions action = new Actions (driver);
+		Actions action = new Actions(driver);
 		action.sendKeys(Keys.TAB).sendKeys(Keys.ENTER).perform();
 	}
 }

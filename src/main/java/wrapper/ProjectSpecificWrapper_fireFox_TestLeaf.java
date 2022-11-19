@@ -13,31 +13,28 @@ import org.testng.annotations.BeforeMethod;
 import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class ProjectSpecificWrapper_fireFox_TestLeaf {
-	
+
 	public WebDriver driver;
-	
+
 	@BeforeMethod
 	public void login() {
-		
+
 		WebDriverManager.firefoxdriver().setup();
 		driver = new FirefoxDriver();
 		driver.navigate().to("http://leaftaps.com/opentaps/control/main");
 		driver.manage().window().maximize();
-		driver.manage().timeouts().implicitlyWait(20,TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 		driver.findElement(By.cssSelector("#username")).sendKeys("DemoSalesManager");
-		Actions action = new Actions (driver);
+		Actions action = new Actions(driver);
 		action.sendKeys(Keys.TAB).sendKeys("crmsfa").perform();
 		action.sendKeys(Keys.TAB).sendKeys(Keys.ENTER).perform();
 		driver.findElement(By.cssSelector("#button")).click();
-		
+
 	}
-	
+
 	@AfterMethod
 	public void logOut() {
 		driver.quit();
 	}
-	
-}
 
-		
-	
+}

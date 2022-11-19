@@ -6,9 +6,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 public class Frame_iframe_webelement {
 
 	public static void main(String[] args) {
-		
-		
-		
+
 		System.setProperty("webdriver.chrome.driver", "./drivers/chromedriver.exe");
 		ChromeDriver driver = new ChromeDriver();
 
@@ -16,7 +14,7 @@ public class Frame_iframe_webelement {
 		driver.findElementByXPath("//a[text()='Selectable']").click();
 		WebElement frm = driver.findElementByXPath("//iframe[@class='demo-frame']");
 		driver.switchTo().frame(frm);
-		
+
 		driver.findElementByXPath("(//ol[@id='selectable']/li)[1]").click();
 		driver.findElementByXPath("(//ol[@id='selectable']/li)[2]").click();
 		driver.findElementByXPath("(//ol[@id='selectable']/li)[3]").click();

@@ -9,33 +9,31 @@ import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
 public class ReadExcel2 {
 
-
-	public static void main(String[] args) throws IOException  {
+	public static void main(String[] args) throws IOException {
 
 		@SuppressWarnings("resource")
 		XSSFWorkbook wb = new XSSFWorkbook("./data/ReadData.xlsx");
 		XSSFSheet sheet = wb.getSheet("Sheet1");
-		//get row count 
+		// get row count
 		int rowCount = sheet.getLastRowNum();
 		System.out.println(rowCount);
-		//column count
-		//getRow we can enter any value , it will not change any column count 
+		// column count
+		// getRow we can enter any value , it will not change any column count
 		int columnCount = sheet.getRow(5).getLastCellNum();
 		System.out.println(columnCount);
-		
-		for (int i = 1; i <=rowCount; i++) {
-			//we will add rowCount and columnCount before getRow 
-			//get row 
+
+		for (int i = 1; i <= rowCount; i++) {
+			// we will add rowCount and columnCount before getRow
+			// get row
 			XSSFRow row = sheet.getRow(i);
-			
-		for (int j = 0; j <columnCount; j++) {
-				//get cell
-			XSSFCell cell = row.getCell(j);
-			String cellValue = cell.getStringCellValue();
-			System.out.println(cellValue);
+
+			for (int j = 0; j < columnCount; j++) {
+				// get cell
+				XSSFCell cell = row.getCell(j);
+				String cellValue = cell.getStringCellValue();
+				System.out.println(cellValue);
 			}
-			
-			
+
 		}
 	}
 

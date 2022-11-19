@@ -10,61 +10,55 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 public class LeafTap {
 
-	
-	
+	public static void main(String[] args) throws InterruptedException {
 
-			public static void main(String[] args) throws InterruptedException {
-				
-			
-			//public void tagName() throws InterruptedException {
+		// public void tagName() throws InterruptedException {
 
-				System.setProperty("webdriver.chrome.driver", "./drivers/chromedriver.exe");
-				// WebDriverManager.firefoxdriver().setup();
+		System.setProperty("webdriver.chrome.driver", "./drivers/chromedriver.exe");
+		// WebDriverManager.firefoxdriver().setup();
 
-				//Using WebDriver interface and create object of ChromeDriver class
-				WebDriver driver = new ChromeDriver();
-				
-				driver.get("http://leaftaps.com/opentaps");
+		// Using WebDriver interface and create object of ChromeDriver class
+		WebDriver driver = new ChromeDriver();
 
-				//driver.get("http://www.indeed.com");
+		driver.get("http://leaftaps.com/opentaps");
 
-				// maximize
-				driver.manage().window().maximize();
+		// driver.get("http://www.indeed.com");
 
-				driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+		// maximize
+		driver.manage().window().maximize();
 
-				// Enter Username 
-				driver.findElement(By.id("username")).sendKeys("DemoSalesManager");
+		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 
-				// Enter Password 
-				driver.findElement(By.id("password")).sendKeys("crmsfa");
-				
-				// Click Login Button 
-				driver.findElement(By.className("decorativeSubmit")).click();
+		// Enter Username
+		driver.findElement(By.id("username")).sendKeys("DemoSalesManager");
 
-				// click crm/sfa link
-				driver.findElement(By.linkText("CRM/SFA")).click();
-				
-				//Find how many a tag/link in this page?
-				//List<WebElement> linkList = driver.findElements(By.tagName("a"));
-				List<WebElement> linkList = driver.findElements(By.tagName("a"));
-				System.out.println(linkList.size());
-				
-				//List elements = driver.findElements(By.tagName("div"));
-			//	int total = elements.size();
-				//int total = elements.size();
-		     //   List elements =  driver.findElements(By.tagName("input"));
-				//int total = elements.size();
+		// Enter Password
+		driver.findElement(By.id("password")).sendKeys("crmsfa");
 
-				//System.out.println(total);
-				//System.out.println("Total webelements starting with TagName 'div' :" + total);
-				//System.out.println("Total Tagname 'Div' :"  + total);
-				//System.out.println("Total Tagname 'input' :"  + total);
-				Thread.sleep(2000);
-				driver.close();
-			
-			
-		
-			
-			
-	}}
+		// Click Login Button
+		driver.findElement(By.className("decorativeSubmit")).click();
+
+		// click crm/sfa link
+		driver.findElement(By.linkText("CRM/SFA")).click();
+
+		// Find how many a tag/link in this page?
+		// List<WebElement> linkList = driver.findElements(By.tagName("a"));
+		List<WebElement> linkList = driver.findElements(By.tagName("a"));
+		System.out.println(linkList.size());
+
+		// List elements = driver.findElements(By.tagName("div"));
+		// int total = elements.size();
+		// int total = elements.size();
+		// List elements = driver.findElements(By.tagName("input"));
+		// int total = elements.size();
+
+		// System.out.println(total);
+		// System.out.println("Total webelements starting with TagName 'div' :" +
+		// total);
+		// System.out.println("Total Tagname 'Div' :" + total);
+		// System.out.println("Total Tagname 'input' :" + total);
+		Thread.sleep(2000);
+		driver.close();
+
+	}
+}

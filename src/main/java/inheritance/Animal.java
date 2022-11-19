@@ -2,21 +2,16 @@ package inheritance;
 
 public class Animal {
 
-
-	public void Eye(){
+	public void Eye() {
 		System.out.println("Have two eyes");
 	}
-	
-	public void Ear () {
+
+	public void Ear() {
 		System.out.println("Have two ears");
 	}
-	
-	public void mouth () {
+
+	public void mouth() {
 		System.out.println("Have one mouth");
 	}
-		
-
-	
-
 
 }

@@ -8,13 +8,12 @@ public class RightClick4 {
 
 	public static void main(String[] args) {
 
-
 		System.setProperty("webdriver.chrome.driver", "./drivers/chromedriver.exe");
 		ChromeDriver driver = new ChromeDriver();
-		
+
 		driver.navigate().to("https://swisnl.github.io/jQuery-contextMenu/demo.html");
 		WebElement rclick = driver.findElementByXPath("//span[text()='right click me']");
-		Actions action = new Actions (driver);
+		Actions action = new Actions(driver);
 		action.click(rclick).contextClick().perform();
 
 	}

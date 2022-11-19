@@ -15,17 +15,16 @@ public class ReadExcel8 {
 		XSSFWorkbook wb = new XSSFWorkbook("./data/ReadData.xlsx");
 		XSSFSheet sheet = wb.getSheet("Sheet1");
 		int rowCount = sheet.getLastRowNum();
-		
-			for (int i = 1; i < rowCount; i++) {
-				XSSFRow row = sheet.getRow(i);
-				short cellCount = row.getLastCellNum();
-				for (int j = 0; j < cellCount; j++) {
-					XSSFCell cell = row.getCell(j);
-					String cellValue = cell.getStringCellValue();
-					System.out.println(cellValue);
-				}
+
+		for (int i = 1; i < rowCount; i++) {
+			XSSFRow row = sheet.getRow(i);
+			short cellCount = row.getLastCellNum();
+			for (int j = 0; j < cellCount; j++) {
+				XSSFCell cell = row.getCell(j);
+				String cellValue = cell.getStringCellValue();
+				System.out.println(cellValue);
 			}
 		}
-	
+	}
 
 }

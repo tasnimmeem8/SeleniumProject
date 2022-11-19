@@ -6,12 +6,12 @@ public class Vehicle {
 		System.out.println("Should be driveable ");
 	}
 
-	public void engine () {
+	public void engine() {
 		System.out.println("Should have engine");
 	}
-	
+
 	public void door() {
 		System.out.println("Should have doors");
 	}
-	
+
 }

@@ -15,40 +15,38 @@ import org.testng.annotations.Parameters;
 
 import utils_Excel.ReadExcel4;
 
-
-
 public class ProjectSpecificWrapper3 {
 	public ChromeDriver driver;
-	
-	@Parameters({"url","un","pw"})
+
+	@Parameters({ "url", "un", "pw" })
 
 	@BeforeTest
-	public void login(String url,String un,String pw) {
-		
+	public void login(String url, String un, String pw) {
+
 		System.setProperty("webdriver.chrome.driver", "./drivers/chromedriver.exe");
 		driver = new ChromeDriver();
 		driver.get(url);
 		driver.findElementById("username").sendKeys(un);
 		driver.findElementById("password").sendKeys(pw);
-		Actions action = new Actions (driver);
+		Actions action = new Actions(driver);
 		action.sendKeys(Keys.TAB).sendKeys(Keys.ENTER).perform();
 		driver.findElementByLinkText("CRM/SFA").click();
-		
+
 		WebDriverWait wait = new WebDriverWait(driver, 10);
 		wait.until(ExpectedConditions.elementToBeClickable(By.linkText("CRM/SFA")));
 	}
-	
+
 	@AfterTest
 	public void logout() {
 		driver.close();
 	}
-	
+
 	@SuppressWarnings("static-access")
 	@DataProvider
-	public String[][]getdata3() throws IOException{
-	
+	public String[][] getdata3() throws IOException {
+
 		ReadExcel4 re = new ReadExcel4();
 		return re.readExcel4();
-	
+
 	}
 }

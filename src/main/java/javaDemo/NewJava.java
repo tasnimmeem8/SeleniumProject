@@ -7,10 +7,7 @@ public class NewJava {
 
 		System.out.println("My name is meem");
 		System.out.println("Her name is Neepa");
-	
-		
-	
-	
+
 	}
 
 }

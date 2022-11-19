@@ -7,19 +7,19 @@ public class HashSet2 {
 
 	public static void main(String[] args) {
 
-		//Java is an object-oriented programming language(OOP)
-		Set<String>ani= new HashSet<String>();
-		
+		// Java is an object-oriented programming language(OOP)
+		Set<String> ani = new HashSet<String>();
+
 		ani.add("Bird");
 		ani.add("Cow");
 		ani.add("Dog");
 		ani.add("Deer");
-		
+
 		System.out.println(ani);
 		System.out.println(ani.size());
 		System.out.println(ani.contains("Cow"));
 		ani.add("Cat");
-		for(String eachanimal: ani) {
+		for (String eachanimal : ani) {
 			System.out.println(eachanimal);
 		}
 

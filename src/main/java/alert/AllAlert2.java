@@ -9,7 +9,7 @@ public class AllAlert2 {
 	public static void main(String[] args) {
 
 		System.setProperty("webdriver.chrome.driver", "./drivers/chromedriver.exe");
-		ChromeDriver driver = new ChromeDriver ();
+		ChromeDriver driver = new ChromeDriver();
 		driver.get("https://the-internet.herokuapp.com/javascript_alerts");
 		driver.manage().window().maximize();
 		driver.findElementByXPath("//button[text()= 'Click for JS Alert']").click();
@@ -18,7 +18,7 @@ public class AllAlert2 {
 		System.out.println(text.getText());
 		driver.findElementByXPath("//button[text()= 'Click for JS Confirm']").click();
 		driver.switchTo().alert().accept();
-		//driver.switchTo().alert().dismiss();
+		// driver.switchTo().alert().dismiss();
 		WebElement text1 = driver.findElementByXPath("//p[@id='result']");
 		System.out.println(text1.getText());
 		driver.findElementByXPath("//button[text()= 'Click for JS Prompt']").click();

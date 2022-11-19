@@ -10,8 +10,7 @@ import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 public class ReadExcel1 {
 
 	public static void main(String[] args) throws IOException {
-		
-		
+
 		@SuppressWarnings("resource")
 		XSSFWorkbook wb = new XSSFWorkbook("./data/ReadData.xlsx");
 		XSSFSheet sheet = wb.getSheet("FamilyName");
