@@ -6,13 +6,13 @@
   <parameter name="url" value="http://leaftaps.com/opentaps/control/main"/>
   <test thread-count="5" name="Test(failed)">
     <classes>
-      <class name="learnTestNGParameters_excel.CreatLead1">
+      <class name="learnTestNGParameters_excel_2.TestCase">
         <methods>
           <include name="login"/>
           <include name="CreatLead"/>
           <include name="logout"/>
         </methods>
-      </class> <!-- learnTestNGParameters_excel.CreatLead1 -->
+      </class> <!-- learnTestNGParameters_excel_2.TestCase -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

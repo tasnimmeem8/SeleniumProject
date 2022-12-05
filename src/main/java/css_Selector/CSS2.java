@@ -12,11 +12,10 @@ import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import org.testng.annotations.Test;
 
 public class CSS2 {
 
-	@Test
+	
 	public static void main(String[] args) throws InterruptedException {
 		System.setProperty("webdriver.chrome.driver", "./drivers/chromedriver.exe");
 		WebDriver driver = new ChromeDriver();
@@ -35,6 +34,9 @@ public class CSS2 {
 
 		WebDriverWait wait1 = new WebDriverWait(driver, 10);
 		wait1.until(ExpectedConditions.elementToBeClickable(By.cssSelector(".crmsfa>a>img")));
+		
+		WebDriverWait wait2= new WebDriverWait(driver,10);
+		wait2.until(ExpectedConditions.elementToBeClickable(By.cssSelector(".crmsfa>a>img")));
 
 		List<WebElement> list = driver.findElements(By.tagName("a"));
 		System.out.println("Contain a tag= " + list.size());

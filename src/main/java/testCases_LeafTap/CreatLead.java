@@ -9,14 +9,10 @@ import org.openqa.selenium.support.ui.Select;
 public class CreatLead {
 
 	public static void main(String[] args) throws InterruptedException {
-		// TODO Auto-generated method stub
-		// [12:42 AM, 9/2/2022] Mamun:
+		
 
-		System.setProperty("webdriver.chrome.driver",
-				"C:\\Users\\tasni\\eclipse-workspace1\\SeleniumProject\\drivers\\chromedriver.exe");
-
+		System.setProperty("webdriver.chrome.driver","./drivers/chromedriver.exe");
 		ChromeDriver driver = new ChromeDriver();
-
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 		driver.get("http://leaftaps.com/opentaps");

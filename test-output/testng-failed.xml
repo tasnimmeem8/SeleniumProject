@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="learnSelenium.Frame">
+      <class name="steps.RunnerFile">
         <methods>
-          <include name="login"/>
-          <include name="dragAndDrop"/>
-          <include name="selectable"/>
+          <include name="setUpClass"/>
+          <include name="runScenario" invocation-numbers="1"/>
+          <include name="tearDownClass"/>
         </methods>
-      </class> <!-- learnSelenium.Frame -->
+      </class> <!-- steps.RunnerFile -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

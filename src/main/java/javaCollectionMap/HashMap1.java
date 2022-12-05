@@ -2,7 +2,6 @@ package javaCollectionMap;
 
 import java.util.Map;
 import java.util.Map.Entry;
-
 import org.apache.commons.collections4.map.HashedMap;
 
 public class HashMap1 {

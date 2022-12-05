@@ -1,4 +1,4 @@
-package learnTestNGParameters1;
+package learnTestNGParameters_excel_3;
 
 import java.io.File;
 import java.io.IOException;
@@ -9,16 +9,16 @@ import org.testng.annotations.Test;
 
 public class CreatLead extends ProjectSpecificWrapper {
 
-	@Test(dataProvider = "getdata")
-	public void creatLead(String cName, String FName, String LName) throws IOException {
+	@Test(dataProvider = "getData")
+	public void creatLead(String cName, String fName, String lName) throws IOException {
 
 		driver.findElementByLinkText("Create Lead").click();
 		driver.findElementById("createLeadForm_companyName").sendKeys(cName);
-		driver.findElementByCssSelector("#createLeadForm_firstName").sendKeys(FName);
-		driver.findElementByCssSelector("#createLeadForm_lastName").sendKeys(LName);
-		driver.getTitle();
+		driver.findElementById("createLeadForm_firstName").sendKeys(fName);
+		driver.findElementById("createLeadForm_lastName").sendKeys(lName);
+
 		File src = driver.getScreenshotAs(OutputType.FILE);
-		File dst = new File("./snap1/image2.png");
+		File dst = new File("C:\\Users\\tasni\\eclipse-workspace1\\SeleniumProject\\snap\\img6.png");
 		FileUtils.copyFile(src, dst);
 
 	}

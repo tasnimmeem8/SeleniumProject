@@ -1,49 +1,103 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
+<testng-results ignored="0" total="2" passed="1" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2022-11-19T13:51:18 EST" name="Default suite" finished-at="2022-11-19T13:51:24 EST" duration-ms="6006">
+  <suite started-at="2022-12-04T17:11:40 EST" name="Default suite" finished-at="2022-12-04T17:12:06 EST" duration-ms="25943">
     <groups>
+      <group name="cucumber">
+        <method signature="AbstractTestNGCucumberTests.runScenario(cucumber.api.testng.PickleEventWrapper, cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:steps.RunnerFile@2e222612]" name="runScenario" class="cucumber.api.testng.AbstractTestNGCucumberTests"/>
+      </group> <!-- cucumber -->
     </groups>
-    <test started-at="2022-11-19T13:51:18 EST" name="Default test" finished-at="2022-11-19T13:51:24 EST" duration-ms="6006">
-      <class name="learnSelenium.Frame">
-        <test-method is-config="true" signature="login()[pri:0, instance:learnSelenium.Frame@5fa07e12]" started-at="2022-11-19T13:51:18 EST" name="login" finished-at="2022-11-19T13:51:19 EST" duration-ms="1337" status="PASS">
+    <test started-at="2022-12-04T17:11:40 EST" name="Default test" finished-at="2022-12-04T17:12:06 EST" duration-ms="25943">
+      <class name="steps.RunnerFile">
+        <test-method is-config="true" signature="setUpClass()[pri:0, instance:steps.RunnerFile@2e222612]" started-at="2022-12-04T17:11:40 EST" name="setUpClass" finished-at="2022-12-04T17:11:40 EST" duration-ms="76" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- login -->
-        <test-method signature="selectable()[pri:0, instance:learnSelenium.Frame@5fa07e12]" started-at="2022-11-19T13:51:19 EST" name="selectable" finished-at="2022-11-19T13:51:20 EST" duration-ms="583" status="PASS">
+        </test-method> <!-- setUpClass -->
+        <test-method signature="runScenario(cucumber.api.testng.PickleEventWrapper, cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:steps.RunnerFile@2e222612]" started-at="2022-12-04T17:11:40 EST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-12-04T17:12:02 EST" duration-ms="21831" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[": TC001_Login and Logout"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Automated Leaftaps Application"]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- selectable -->
-        <test-method is-config="true" signature="logout()[pri:0, instance:learnSelenium.Frame@5fa07e12]" started-at="2022-11-19T13:51:20 EST" name="logout" finished-at="2022-11-19T13:51:20 EST" duration-ms="106" status="PASS">
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(cucumber.api.testng.PickleEventWrapper, cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:steps.RunnerFile@2e222612]" started-at="2022-12-04T17:12:02 EST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-12-04T17:12:06 EST" duration-ms="3971" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[": TC001_Login and Logout"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Automated Leaftaps Application"]]>
+              </value>
+            </param>
+          </params>
+          <exception class="cucumber.runner.AmbiguousStepDefinitionsException">
+            <message>
+              <![CDATA["enter username as DemoCSR" matches more than one step definition:
+  "enter username as (.*)" in Login.enter_username_as_DemoSalesManager(String)
+  "enter username as DemoCSR" in Login.enter_username_as_DemoCSR()
+]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[cucumber.runner.AmbiguousStepDefinitionsException: "enter username as DemoCSR" matches more than one step definition:
+  "enter username as (.*)" in Login.enter_username_as_DemoSalesManager(String)
+  "enter username as DemoCSR" in Login.enter_username_as_DemoCSR()
+
+at cucumber.runner.Glue.stepDefinitionMatch(Glue.java:92)
+at cucumber.runner.Runner.addTestStepsForPickleSteps(Runner.java:73)
+at cucumber.runner.Runner.createTestCaseForPickle(Runner.java:63)
+at cucumber.runner.Runner.runPickle(Runner.java:48)
+at cucumber.api.testng.TestNGCucumberRunner.runScenario(TestNGCucumberRunner.java:57)
+at cucumber.api.testng.AbstractTestNGCucumberTests.runScenario(AbstractTestNGCucumberTests.java:22)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:584)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:172)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:804)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:145)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:770)
+at org.testng.TestRunner.run(TestRunner.java:591)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:402)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:396)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:355)
+at org.testng.SuiteRunner.run(SuiteRunner.java:304)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1180)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1102)
+at org.testng.TestNG.runSuites(TestNG.java:1032)
+at org.testng.TestNG.run(TestNG.java:1000)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- cucumber.runner.AmbiguousStepDefinitionsException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- logout -->
-        <test-method is-config="true" signature="login()[pri:0, instance:learnSelenium.Frame@5fa07e12]" started-at="2022-11-19T13:51:20 EST" name="login" finished-at="2022-11-19T13:51:21 EST" duration-ms="869" status="PASS">
+        </test-method> <!-- runScenario -->
+        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:steps.RunnerFile@2e222612]" started-at="2022-12-04T17:12:06 EST" name="tearDownClass" finished-at="2022-12-04T17:12:06 EST" duration-ms="17" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- login -->
-        <test-method signature="dragAndDrop()[pri:1, instance:learnSelenium.Frame@5fa07e12]" started-at="2022-11-19T13:51:21 EST" name="dragAndDrop" finished-at="2022-11-19T13:51:21 EST" duration-ms="519" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- dragAndDrop -->
-        <test-method is-config="true" signature="logout()[pri:0, instance:learnSelenium.Frame@5fa07e12]" started-at="2022-11-19T13:51:21 EST" name="logout" finished-at="2022-11-19T13:51:22 EST" duration-ms="117" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- logout -->
-        <test-method is-config="true" signature="login()[pri:0, instance:learnSelenium.Frame@5fa07e12]" started-at="2022-11-19T13:51:22 EST" name="login" finished-at="2022-11-19T13:51:22 EST" duration-ms="889" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- login -->
-        <test-method signature="sortable()[pri:2, instance:learnSelenium.Frame@5fa07e12]" started-at="2022-11-19T13:51:22 EST" name="sortable" finished-at="2022-11-19T13:51:24 EST" duration-ms="1460" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- sortable -->
-        <test-method is-config="true" signature="logout()[pri:0, instance:learnSelenium.Frame@5fa07e12]" started-at="2022-11-19T13:51:24 EST" name="logout" finished-at="2022-11-19T13:51:24 EST" duration-ms="101" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- logout -->
-      </class> <!-- learnSelenium.Frame -->
+        </test-method> <!-- tearDownClass -->
+      </class> <!-- steps.RunnerFile -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

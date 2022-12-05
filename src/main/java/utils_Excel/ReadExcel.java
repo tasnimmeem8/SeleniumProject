@@ -10,7 +10,7 @@ public class ReadExcel {
 
 	public String[][] readExcel() throws IOException {
 
-		@SuppressWarnings("resource")
+
 		XSSFWorkbook wb = new XSSFWorkbook("./data/ReadExcel.xlsx");
 		XSSFSheet sheet = wb.getSheetAt(0);
 		int RowCount = sheet.getLastRowNum();

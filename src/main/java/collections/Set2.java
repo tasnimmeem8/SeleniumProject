@@ -23,6 +23,7 @@ public class Set2 {
 			System.out.println(eachwindow);
 		}
 
+		
 		driver.quit();
 
 	}

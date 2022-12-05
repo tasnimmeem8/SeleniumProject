@@ -1,7 +1,12 @@
 package learnTestNG;
 
+import java.io.File;
+import java.io.IOException;
 import java.util.concurrent.TimeUnit;
+
+import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.Keys;
+import org.openqa.selenium.OutputType;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Actions;
@@ -34,7 +39,7 @@ public class TestLeaf {
 	}
 
 	@Test(priority = 2)
-	public void CreatLead() {
+	public void CreatLead() throws IOException {
 		driver.findElementByXPath("//a[contains(text(),'Crea')]").click();
 		driver.findElementByXPath("//input[@id='createLeadForm_companyName']").sendKeys("ABC");
 		driver.findElementByXPath("//input[@id='createLeadForm_firstName']").sendKeys("Hema");
@@ -77,11 +82,12 @@ public class TestLeaf {
 		if (tl.contains("View")) {
 			System.out.println("Verification successful ");
 		} else {
-			System.out.println("Verification failed");
+			File from = driver.getScreenshotAs(OutputType.FILE);
+			File to = new File ("./snap/img1.png");
+			FileUtils.copyFile(from, to);
 		}
 
 		driver.findElementByCssSelector(".subMenuButtonDangerous").click();
-
 	}
 
 	@Test(priority = 1)

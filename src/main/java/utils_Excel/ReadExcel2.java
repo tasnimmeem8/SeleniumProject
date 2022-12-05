@@ -1,7 +1,6 @@
 package utils_Excel;
 
 import java.io.IOException;
-
 import org.apache.poi.xssf.usermodel.XSSFCell;
 import org.apache.poi.xssf.usermodel.XSSFRow;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
@@ -11,7 +10,7 @@ public class ReadExcel2 {
 
 	public static String[][] readExcel2() throws IOException {
 
-		@SuppressWarnings("resource")
+		
 		XSSFWorkbook wb = new XSSFWorkbook("./data/ReadExcel.xlsx");
 		XSSFSheet sheet = wb.getSheetAt(0);
 		int RowCount = sheet.getLastRowNum();

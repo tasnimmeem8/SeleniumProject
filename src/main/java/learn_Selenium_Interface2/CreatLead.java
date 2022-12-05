@@ -10,6 +10,7 @@ public class CreatLead extends GenericWrapper {
 		enterById("username", "DemoSalesManager");
 		enterById("password", "crmsfa");
 		clickByClass("decorativeSubmit");
+		clickByLinkText("CRM/SFA");
 
 	}
 

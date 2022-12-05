@@ -1,10 +1,8 @@
-package testPeramitars_DataProvider_excel;
+package learnTestNGParameters_excel_1;
 
-import java.io.File;
 import java.io.IOException;
-import org.apache.commons.io.FileUtils;
+
 import org.openqa.selenium.Keys;
-import org.openqa.selenium.OutputType;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Actions;
 import org.testng.annotations.AfterMethod;
@@ -12,40 +10,35 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Parameters;
 
-public class ProjectSpecificWrapper {
-
+public class ProjectSpesificWrapper{
+	
 	public ChromeDriver driver;
-
-	@Parameters({ "url", "un", "pw" })
-
+	
+    @Parameters({"url","un","pw"})
+	
 	@BeforeMethod
-	public void login(String url, String un, String pw) throws IOException {
+	public void login (String url, String un, String pw) throws InterruptedException {
 		System.setProperty("webdriver.chrome.driver", "./drivers/chromedriver.exe");
-		driver = new ChromeDriver();
+		driver= new ChromeDriver();
 		driver.get(url);
 		driver.findElementById("username").sendKeys(un);
 		driver.findElementById("password").sendKeys(pw);
-		Actions action = new Actions(driver);
+		Actions action = new Actions (driver);
 		action.sendKeys(Keys.TAB).sendKeys(Keys.ENTER).perform();
 		driver.findElementByLinkText("CRM/SFA").click();
-
-		File src = driver.getScreenshotAs(OutputType.FILE);
-		File dst = new File("./snap/img6.png");
-		FileUtils.copyFile(src, dst);
+		Thread.sleep(1000);
 	}
-
+	
 	@AfterMethod
 	public void logout() {
-		driver.close();
+		driver.quit();
 	}
-
-	@SuppressWarnings("static-access")
+	
 	@DataProvider
-	public String[][] getData() throws IOException {
-
-		ReadExcel re = new ReadExcel();
-		return re.readExcel1();
-
+	public String[][]getData() throws IOException {
+		Read_Excel re = new Read_Excel();
+		return re.readExcel();
 	}
 
 }
+
