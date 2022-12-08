@@ -12,7 +12,7 @@ public class Excel {
 	public static String[][] readExcel() throws IOException {
 
 		@SuppressWarnings("resource")
-		XSSFWorkbook wb = new XSSFWorkbook("./data/ReadExcel.xlsx");
+		XSSFWorkbook wb = new XSSFWorkbook("./data1/RecordData.xlsx");
 		XSSFSheet sheet = wb.getSheetAt(0);
 		int RowCount = sheet.getLastRowNum();
 		short ColumnCount = sheet.getRow(0).getLastCellNum();

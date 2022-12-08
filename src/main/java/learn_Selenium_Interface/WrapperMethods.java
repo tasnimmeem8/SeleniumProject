@@ -2,7 +2,7 @@ package learn_Selenium_Interface;
 
 public interface WrapperMethods {
 
-	public void login(String url);
+	public void login(String url) throws InterruptedException;
 
 	public void enterById(String locatorValue, String data);
 

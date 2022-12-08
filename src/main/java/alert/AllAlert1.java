@@ -1,10 +1,11 @@
 package alert;
 
+import java.io.IOException;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 public class AllAlert1 {
 
-	public static void main(String[] args) throws InterruptedException {
+	public static void main(String[] args) throws InterruptedException, IOException {
 
 		System.setProperty("webdriver.chrome.driver",
 				"C:\\Users\\tasni\\eclipse-workspace1\\SeleniumProject\\drivers\\chromedriver.exe");
@@ -29,6 +30,7 @@ public class AllAlert1 {
 		// driver.switchTo().alert().accept();
 		driver.switchTo().alert().dismiss();
 		System.out.println("Result =" + driver.findElementByXPath("//p[@id='result']").getText());
+		
 
 		Thread.sleep(3000);
 		driver.quit();

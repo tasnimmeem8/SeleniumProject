@@ -4,19 +4,21 @@ import org.testng.annotations.Test;
 
 public class CreatLead extends GenericWrapper {
 
-	@Test
-	public void creatLead() {
+
+	@Test(dataProvider="getData")
+	public void creatLead(String cname, String fname, String lname) throws InterruptedException {
 
 		login("http://leaftaps.com/opentaps/control/main");
-		enterById("username", "DemoSalesManager");
+		enterById("username", "DemoCSR");
 		enterByXpath("//input[@id='password']", "crmsfa");
 		clickByClass("decorativeSubmit");
 		clickByLinkText("CRM/SFA");
 		clickByLinkText("Create Lead");
-		enterById("createLeadForm_companyName", "ABC");
-		enterById("createLeadForm_firstName", "Hema");
-		enterById("createLeadForm_lastName", "Mali");
+		enterById("createLeadForm_companyName", cname);
+		enterById("createLeadForm_firstName", fname);
+		enterById("createLeadForm_lastName", lname);
 
 	}
+	
 
 }

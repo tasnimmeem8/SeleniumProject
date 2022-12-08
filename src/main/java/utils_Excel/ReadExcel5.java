@@ -23,7 +23,7 @@ public class ReadExcel5 {
 				XSSFCell cell = row.getCell(j);
 				String cellValue = cell.getStringCellValue();
 				System.out.println(cellValue);
-				//data [i-1][j]=cellValue;
+				data [i-1][j]=cellValue;
 			}
 		}
         
